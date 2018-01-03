@@ -1,2 +1,24 @@
+/* general styles */
+.inline {
+    display: inline-block;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: #c9c9c9;
+}
+
+.text-center {
+    text-align: center;
+}
 
 
