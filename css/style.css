@@ -21,4 +21,16 @@
     text-align: center;
 }
 
+/* position style */
+.container {
+    padding: 30px;
+}
 
+.sidebar {
+    width: 33.1%;
+}
+
+.content {
+    max-width: 500px;
+    width: 66.5%;
+}
