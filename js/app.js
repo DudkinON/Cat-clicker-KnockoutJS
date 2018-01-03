@@ -52,4 +52,24 @@
       }, this);
   };
 
+  var ViewModel = function () {
+    var self = this;
+
+    this.cats = ko.observableArray([]);
+    Cats.forEach(function (catItem) {
+      self.cats.push(new Cat(catItem));
+    });
+
+    this.selectCat = function (cat) {
+      self.currentCat(cat);
+    };
+
+    this.currentCat = ko.observable(this.cats()[0]);
+
+    this.incrementCounter = function () {
+      this.clickCount(this.clickCount() + 1);
+    }
+  };
+
+  ko.applyBindings(new ViewModel());
 }());
