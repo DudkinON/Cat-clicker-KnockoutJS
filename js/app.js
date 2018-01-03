@@ -33,4 +33,23 @@
     }
   ];
 
+  var Cat = function (data) {
+    this.clickCount = ko.observable(data.clickCount);
+    this.name = ko.observable(data.name);
+    this.image = ko.observable(data.image);
+    this.nicknames = ko.observableArray(data.nicknames);
+
+    this.title = ko.computed(function () {
+      var clicks = this.clickCount();
+
+      if      (clicks < 10)   return 'Newborn';
+      else if (clicks < 50)   return 'Infant';
+      else if (clicks < 100)  return 'Child';
+      else if (clicks < 200)  return 'Teen';
+      else if (clicks < 500)  return 'Adult';
+      else                    return 'Ninja';
+
+      }, this);
+  };
+
 }());
